@@ -1,0 +1,17 @@
+# secrets: NEVER commit
+.env
+.env.local
+
+# dependencies and builds
+node_modules/
+dist/
+.vercel/
+
+# python
+__pycache__/
+*.pyc
+.venv/
+
+# editor / OS
+.DS_Store
+Thumbs.db

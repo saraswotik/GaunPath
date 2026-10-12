@@ -1,0 +1,57 @@
+/* Tailwind v4 — import the framework */
+@import "tailwindcss";
+
+/* ──────────────────────────────────────────────
+   Custom theme tokens for GaunPath dark theme
+   ────────────────────────────────────────────── */
+@theme {
+  /* ── Core GaunPath palette ── */
+  --color-gaun-bg: #0B0F0E;
+  --color-gaun-card: #161B19;
+  --color-gaun-teal: #2DD4BF;
+  --color-gaun-teal-dark: #14B8A6;
+  --color-gaun-text: #F1F5F9;
+  --color-gaun-muted: #94A3B8;
+  --color-gaun-border: #1E293B;
+  --color-gaun-error: #EF4444;
+  --color-gaun-error-bg: #1A0B0B;
+  --color-gaun-success-bg: #0B1A17;
+
+  /* ── Semantic alert colours (used by AlertToast) ──
+     Tuned to read clearly on our near-black #0B0F0E background.
+     The "-foreground" variants are for text ON the filled background. */
+  --color-success: #22C55E;
+  --color-success-foreground: #052E16;
+  --color-warning: #F59E0B;
+  --color-warning-foreground: #422006;
+  --color-info: #3B82F6;
+  --color-info-foreground: #172554;
+  --color-destructive: #EF4444;
+  --color-destructive-foreground: #450A0A;
+
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+}
+
+/* ──────────────────────────────────────────────
+   Global base styles
+   ────────────────────────────────────────────── */
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-gaun-bg);
+  color: var(--color-gaun-text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Remove default browser margins */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Smooth focus ring using our teal accent */
+:focus-visible {
+  outline: 2px solid var(--color-gaun-teal);
+  outline-offset: 2px;
+}
